@@ -36,9 +36,12 @@ $(document).ready(function () {
   });
 
   //   Mic button click event
-  $("#MicBtn").click(function (e) {
+  $("#MicBtn").click(function () {
+    $(".siri-message .texts li").text("");
+    $(".siri-message").textillate("stop");
     eel.playAssistantSound();
     $("#oval").attr("hidden", true);
     $("#SiriWave").attr("hidden", false);
+    eel.takeCommand()();
   });
 });
