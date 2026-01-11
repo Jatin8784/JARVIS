@@ -34,4 +34,11 @@ $(document).ready(function () {
       sync: true,
     },
   });
+
+  //   Mic button click event
+  $("#MicBtn").click(function (e) {
+    eel.playAssistantSound();
+    $("#oval").attr("hidden", true);
+    $("#SiriWave").attr("hidden", false);
+  });
 });
